@@ -9,7 +9,7 @@
     function calculateSavings() {
       var cigarettesPerDay = parseFloat(document.getElementById("cigarettes").value);
       var pricePerPack = parseFloat(document.getElementById("price").value);
-      var cigarettesPerPack = 20; // Nombre de cigarettes par paquet
+      var cigarettesPerPack = 20; // Nombre moyen de cigarettes par paquet
       
       if (isNaN(cigarettesPerDay) || isNaN(pricePerPack)) {
         alert("Veuillez entrer des valeurs valides.");
@@ -44,7 +44,10 @@
   </header>
   <main>
     <section>
-      <h2>Calculez vos économies</h2>
+      <h2>Estimez vos économies</h2>
+      <p>
+        Utilisez cet outil pour calculer de manière approximative les économies que vous pouvez réaliser en optant pour la cigarette électronique. Ces estimations sont fournies à titre informatif et basées sur une consommation moyenne.
+      </p>
       <form onsubmit="event.preventDefault(); calculateSavings();">
         <label for="cigarettes">Nombre de cigarettes fumées par jour :</label>
         <input type="number" id="cigarettes" required>
@@ -58,7 +61,7 @@
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 Mon Site Mobile. Tous droits réservés.</p>
+    <p>&copy; 2025 Transition Réussie. Tous droits réservés.</p>
   </footer>
 </body>
 </html>
