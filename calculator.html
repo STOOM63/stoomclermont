@@ -5,29 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculateur d'Économie</title>
   <link rel="stylesheet" href="style.css">
-  <script>
-    function calculateSavings() {
-      var cigarettesPerDay = parseFloat(document.getElementById("cigarettes").value);
-      var pricePerPack = parseFloat(document.getElementById("price").value);
-      var cigarettesPerPack = 20; // Nombre moyen de cigarettes par paquet
-      
-      if (isNaN(cigarettesPerDay) || isNaN(pricePerPack)) {
-        alert("Veuillez entrer des valeurs valides.");
-        return;
-      }
-      
-      var dailyCost = (cigarettesPerDay / cigarettesPerPack) * pricePerPack;
-      var weeklySavings = dailyCost * 7;
-      var monthlySavings = dailyCost * 30;
-      var yearlySavings = dailyCost * 365;
-      
-      document.getElementById("result").innerHTML =
-        "<p>Économie quotidienne : " + dailyCost.toFixed(2) + " €</p>" +
-        "<p>Économie hebdomadaire : " + weeklySavings.toFixed(2) + " €</p>" +
-        "<p>Économie mensuelle : " + monthlySavings.toFixed(2) + " €</p>" +
-        "<p>Économie annuelle : " + yearlySavings.toFixed(2) + " €</p>";
-    }
-  </script>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
@@ -46,7 +24,7 @@
     <section>
       <h2>Estimez vos économies</h2>
       <p>
-        Utilisez cet outil pour calculer de manière approximative les économies que vous pouvez réaliser en optant pour la cigarette électronique. Ces estimations sont fournies à titre informatif et basées sur une consommation moyenne.
+        Utilisez cet outil pour calculer approximativement les économies réalisables en passant à la cigarette électronique. Ce calculateur est basé sur des moyennes et vous aide à visualiser l’impact économique de votre transition.
       </p>
       <form onsubmit="event.preventDefault(); calculateSavings();">
         <label for="cigarettes">Nombre de cigarettes fumées par jour :</label>
@@ -58,10 +36,25 @@
         <button type="submit">Calculer</button>
       </form>
       <div id="result"></div>
+      <button data-modal-target="modal-calc-info">Plus d'infos sur le calcul</button>
     </section>
   </main>
   <footer>
     <p>&copy; 2025 Transition Réussie. Tous droits réservés.</p>
   </footer>
+
+  <!-- Modal Calculateur -->
+  <div id="modal-calc-info" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h3>Comment ça marche ?</h3>
+      <p>
+        Le calculateur divise le nombre de cigarettes fumées par jour par 20 (nombre moyen dans un paquet) pour estimer le coût journalier. Ce coût est ensuite multiplié pour obtenir des estimations hebdomadaires, mensuelles et annuelles.
+      </p>
+      <p>
+        Ces chiffres vous permettent de visualiser les économies potentielles et de mieux planifier votre transition.
+      </p>
+    </div>
+  </div>
 </body>
 </html>
