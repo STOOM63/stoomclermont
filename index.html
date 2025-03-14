@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon Site Mobile - Accueil</title>
+  <title>Accueil - Transition Réussie</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>Mon Site Mobile</h1>
+    <h1>Transition Réussie</h1>
     <nav>
       <ul>
         <li><a href="index.html" class="active">Accueil</a></li>
@@ -21,12 +22,29 @@
   </header>
   <main>
     <section id="home">
-      <h2>Bienvenue sur Mon Site Mobile</h2>
-      <p>Découvrez comment notre application peut vous aider à économiser et à arrêter de fumer.</p>
+      <h2>Bienvenue sur Transition Réussie</h2>
+      <p>
+        Notre mission est de vous accompagner dans votre démarche de passage à la cigarette électronique, en vous aidant à maximiser vos économies et à adopter une alternative moins nocive.
+      </p>
+      <p>
+        Découvrez des outils interactifs, des conseils professionnels et des produits certifiés qui vous permettront de transformer votre quotidien.
+      </p>
+      <button data-modal-target="modal-home">En savoir plus</button>
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 Mon Site Mobile. Tous droits réservés.</p>
+    <p>&copy; 2025 Transition Réussie. Tous droits réservés.</p>
   </footer>
+
+  <!-- Modal Accueil -->
+  <div id="modal-home" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h3>Notre Vision</h3>
+      <p>
+        Chez Transition Réussie, nous croyons qu'une transition réussie passe par la préservation de vos habitudes quotidiennes tout en adoptant des alternatives plus saines. Notre approche interactive et personnalisée vous offre des outils concrets et des conseils d'experts pour réussir ce changement en douceur.
+      </p>
+    </div>
+  </div>
 </body>
 </html>
