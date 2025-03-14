@@ -7,18 +7,20 @@
 
 /* Styles globaux */
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Poppins', sans-serif;
+  background: #f7f8fa;
+  color: #333;
   line-height: 1.6;
   padding: 20px;
 }
 
 /* En-tête */
 header {
-  background-color: #a8d0e6; /* Bleu clair moderne */
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
   color: #fff;
-  padding: 20px;
+  padding: 20px 10px;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -26,66 +28,148 @@ nav ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 10px 0;
+  margin-top: 10px;
 }
 
 nav ul li {
-  margin: 5px 15px;
+  margin: 0 15px;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
+nav ul li a:hover,
 nav ul li a.active {
-  font-weight: bold;
+  color: #ffeaa7;
   text-decoration: underline;
 }
 
 /* Contenu principal */
 main {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
+  margin-top: 30px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 section {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+h1, h2, h3 {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 15px;
+  font-size: 1rem;
 }
 
 /* Formulaires */
 form label {
   display: block;
-  margin-top: 10px;
+  margin: 10px 0 5px;
+  font-weight: 500;
 }
 
 form input, form textarea {
   width: 100%;
-  padding: 8px;
-  margin-top: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
 form button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #a8d0e6;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
   color: #fff;
   border: none;
-  border-radius: 3px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Boutons interactifs */
+button {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 0;
+  color: #fff;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Pied de page */
 footer {
   text-align: center;
-  margin-top: 20px;
-  padding-top: 10px;
-  font-size: 0.9em;
-  color: #555;
+  margin-top: 30px;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #777;
+  border-top: 1px solid #eee;
+}
+
+/* Styles des modales */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #aaa;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #333;
 }
 
 /* Adaptation mobile */
