@@ -1,0 +1,61 @@
+!DOCTYPE html
+html lang=fr
+head
+  meta charset=UTF-8
+  meta name=viewport content=width=device-width, initial-scale=1.0
+  titleCalculateur d'Économietitle
+  link rel=stylesheet href=style.css
+  script
+    function calculateSavings() {
+      var cigarettesPerDay = parseFloat(document.getElementById(cigarettes).value);
+      var pricePerPack = parseFloat(document.getElementById(price).value);
+      var cigarettesPerPack = 20;  Nombre de cigarettes par paquet
+      if (isNaN(cigarettesPerDay)  isNaN(pricePerPack)) {
+        alert(Veuillez entrer des valeurs valides.);
+        return;
+      }
+      var dailyCost = (cigarettesPerDay  cigarettesPerPack)  pricePerPack;
+      var weeklySavings = dailyCost  7;
+      var monthlySavings = dailyCost  30;
+      var yearlySavings = dailyCost  365;
+      document.getElementById(result).innerHTML =
+        pÉconomie quotidienne   + dailyCost.toFixed(2) +  €p +
+        pÉconomie hebdomadaire   + weeklySavings.toFixed(2) +  €p +
+        pÉconomie mensuelle   + monthlySavings.toFixed(2) +  €p +
+        pÉconomie annuelle   + yearlySavings.toFixed(2) +  €p;
+    }
+  script
+head
+body
+  header
+    h1Calculateur d'Économieh1
+    nav
+      ul
+        lia href=index.htmlAccueilali
+        lia href=calculator.html class=activeCalculateurali
+        lia href=tips.htmlConseilsali
+        lia href=products.htmlProduitsali
+        lia href=contact.htmlContactali
+      ul
+    nav
+  header
+  main
+    section
+      h2Calculez vos économiesh2
+      form onsubmit=event.preventDefault(); calculateSavings();
+        label for=cigarettesNombre de cigarettes fumées par jour label
+        input type=number id=cigarettes required
+        br
+        label for=pricePrix d'un paquet (en €) label
+        input type=number step=0.01 id=price required
+        br
+        button type=submitCalculerbutton
+      form
+      div id=resultdiv
+    section
+  main
+  footer
+    p&copy; 2025 Mon Site Mobile. Tous droits réservés.p
+  footer
+body
+html
