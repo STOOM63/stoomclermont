@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produits & Offres</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Produits Certifiés</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="calculator.html">Calculateur</a></li>
+        <li><a href="tips.html">Conseils</a></li>
+        <li><a href="products.html" class="active">Produits</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Notre Gamme de Produits</h2>
+      <p>
+        Découvrez notre sélection rigoureusement testée de cigarettes électroniques, e-liquides et accessoires, conçus pour faciliter votre transition vers une consommation réduite de tabac.
+      </p>
+      <ul>
+        <li>
+          <strong>Cigarette Électronique Pro</strong>
+          <button data-modal-target="modal-prod1">Détails</button>
+        </li>
+        <li>
+          <strong>E-Liquide Premium</strong>
+          <button data-modal-target="modal-prod2">Détails</button>
+        </li>
+        <li>
+          <strong>Accessoires Essentiels</strong>
+          <button data-modal-target="modal-prod3">Détails</button>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Transition Réussie. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Modal Produit 1 -->
+  <div id="modal-prod1" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h3>Cigarette Électronique Pro</h3>
+      <p>
+        Dotée d’un design moderne et de technologies de pointe, cette cigarette électronique offre une expérience utilisateur optimale avec une sécurité certifiée et une performance fiable.
+      </p>
+    </div>
+  </div>
+
+  <!-- Modal Produit 2 -->
+  <div id="modal-prod2" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h3>E-Liquide Premium</h3>
+      <p>
+        Élaboré à partir d’ingrédients de qualité supérieure, notre e-liquide se décline en plusieurs saveurs, garantissant une expérience gustative riche et authentique.
+      </p>
+    </div>
+  </div>
+
+  <!-- Modal Produit 3 -->
+  <div id="modal-prod3" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h3>Accessoires Essentiels</h3>
+      <p>
+        Complétez votre équipement avec nos chargeurs, étuis et résistances spécialement sélectionnés pour optimiser votre expérience de vapotage.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
